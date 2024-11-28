@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CategoryProductController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,8 +20,10 @@ use Illuminate\Support\Facades\Route;
 //    'index', 'store', 'show', 'update', 'destroy'
 //]);
 
+
 Route::apiResources([
     'category' => CategoryController::class,
     'product' => ProductController::class,
+    'category.product' => CategoryProductController::class,
 ]);
 
